@@ -106,12 +106,12 @@
             <div class="PER-result-container">PER : <span class="PER-result"></span></div>
             <div class="suprise"></div>
             <div class="player-name"></div>
-
+            <div class="player-img"></div>
         </div>
         
         <footer class="footer">Made by Yarden Ankonina & Alon Sapozhnikov <a class="github_link"
                 href="https://github.com/Yarden-Ankonina/NBA-Data-Science"><img
-                    src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo-768x432.png" alt="#"></a></footer>
+                    src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo-768x432.png" alt="#" class="img-git"></a></footer>
     </main>
 
     <style>
@@ -238,7 +238,10 @@
         }
 
         img {
-            width: 3em;
+            width: 12em;
+        }
+        .img-git{
+            width:3em;
         }
     </style>
 </body>
@@ -289,74 +292,90 @@
         suprise.innerText = "You got a PER just like :";
         
         let playerNameVal;
-        
+        let playerImg = document.createElement('img'); 
+
         if(res >= 35){
             playerNameVal = "Lebron James" ;
+            playerImg.src = "https://pbs.twimg.com/profile_images/1010862750401253377/Rof4XuYC_400x400.jpg";
         }
         else if(res >= 30 && res < 35){
-            playerNameVal = "Lebron James" ;
+            playerNameVal = "Anthony Davis" ;
+            playerImg.src = "https://ca-times.brightspotcdn.com/dims4/default/24fd7b5/2147483647/strip/true/crop/2000x1350+0+0/resize/840x567!/format/webp/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F0c%2F8a%2Fe71301d8483dbbef583604c12191%2Fanthony-davis-all-america-game.jpg";
 
         }
         else if(res >= 27.5 && res < 30){
-            playerNameVal = "Lebron James" ;
+            playerNameVal = "Luka Doncic" ;
+            playerImg.src = "https://www.euroleague.net/rs/88ssjkrlx4iuswpp/a180d37b-8f1c-4d7f-869b-955efab3716f/600/filename/luka-doncic-real-madrid-media-day-2017-eb17-88ssjkrlx4iuswpp.jpg";
 
         }
         else if(res >= 25 && res < 27.5){
-            playerNameVal = "Lebron James" ;
+            playerNameVal = "Jayson Tatum" ;
+            playerImg.src = "https://3.bp.blogspot.com/-Do4c_x_25h0/WiH-MIe6lvI/AAAAAAAAGC8/FA-aLDDX-kcx7GL7MBpr9ImTDMSqid8qQCLcBGAs/s1600/tatum%2BHS%2Bbball%2Bspotlight%2Bnews.jpg";
 
         }       
         else if(res >= 22.5 && res < 25){
-            playerNameVal = "Lebron James" ;
+            playerNameVal = "Devin Booker" ;
+            playerImg.src = "https://www.nationofblue.com/wp-content/uploads/2013/04/devin-booker-alabama-challenge.jpg";
 
         }   
         else if(res >= 20 && res < 22.5){
-            playerNameVal = "Lebron James" ;
+            playerNameVal = "Lamelo Ball" ;
+            playerImg.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/LaMelo_Ball_Vytautas.jpg/800px-LaMelo_Ball_Vytautas.jpg";
 
         }   
         else if(res >= 18 && res < 20){
-            playerNameVal = "Lebron James" ;
+            playerNameVal = "Lonzo Ball" ;
+            playerImg.src = "https://a.espncdn.com/combiner/i?img=/i/headshots/recruiting/ncb/players/full/171485.png&w=350&h=254";
 
         }
         else if(res >= 16.5 && res < 18){
-            playerNameVal = "Lebron James" ;
+            playerNameVal = "Aaron Gordon" ;
+            playerImg.src = "https://i.pinimg.com/originals/f8/dc/af/f8dcaf5772e22463d4ce2341f709eb3d.jpg";
 
         }
         else if(res >= 15 && res < 16.5){
-            playerNameVal = "Lebron James" ;
+            playerNameVal = "Quinn cook" ;
+            playerImg.src = "https://s.yimg.com/it/api/res/1.2/cw2EsFgJwTak4p44uvJThg--~A/YXBwaWQ9eW5ld3M7dz0zMDA7aD0yMDA7cT0xMDA-/https:/s.yimg.com/xe/i/us/sp/v/nba_cutout/players_l/01052021/5588.png";
 
         }   
         else if(res >= 13 && res < 15){
-            playerNameVal = "Deni Avdija" ;
+            playerNameVal = "Patrick Beverley" ;
+            playerImg.src = "https://cdn.wtfoot.com/wp-content/uploads/2019/11/patrick-beverley.png";
 
         } 
         else if(res >= 11 && res < 13){
-            playerNameVal = "Deni Avdija" ;
+            playerNameVal = "Bol Bol" ;
+            playerImg.src = "https://cdn.vox-cdn.com/thumbor/1ZnIPF_cw8WeQ3YkhSN-Bx-o2xg=/0x0:5218x3482/920x613/filters:focal(2192x1324:3026x2158):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/54641161/20170421_EYBLSESSION1_JONLOPEZ_02770.0.jpg";
 
         } 
         else if(res >= 9 && res < 11){
-            playerNameVal = "Alon Sapoz" ;
+            playerNameVal = "Deni Avdija" ;
+            playerImg.src = "http://maccabi.co.il/mtpic/2019-20/Passport/profile_avadia.png";
 
         }
         else{
-            playerNameVal = "Alon Sapoz" ;
+            playerNameVal = "Solomon Hill" ;
+            playerImg.src = "https://www.sun-sentinel.com/resizer/FlXKiv_qfAOCgsid2OrOHNR42ng=/800x451/top/cloudfront-us-east-1.images.arcpublishing.com/tronc/LPWGMWXCDNE5PLS56QGSIHVTOQ.jpg";
 
         }
 
         playerName = document.getElementsByClassName("player-name")[0];
         playerName.innerText = playerNameVal;
 
+	    document.getElementsByClassName('player-img')[0].appendChild(playerImg);
 
         setTimeout(function(){
             res_PER.innerText = "";
-            playerName = "";
-            suprise = "";
+            playerName.innerText = "";
+            suprise.innerText = "";
+            document.getElementsByClassName('player-img')[0].removeChild(playerImg);
             alert("Thank You")
         }, 2000);
 
 
         }
         else {
-            alert("Make sure to fill in all of the stats (MP != 0)");
+            alert("Make sure to fill in all of the stats (MP is not zero)");
         }
 
         
