@@ -4,7 +4,6 @@ This repo contains a A  [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/
 ### Main Purpose
 The NBA has a lot of interesting statistics but there is a statistic that combines them all, under the name PER.
 We will use it to estimate the success of the players in their season.
-![image](https://user-images.githubusercontent.com/11579674/123353606-8932f580-d56a-11eb-9699-f409a741429e.png)
 
 
 ### Acquisition
