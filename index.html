@@ -11,14 +11,15 @@
 <body>
     <header>
         <div class="header">
-            <h1 class="title">PER Calculator</h1>
+            <h1 class="title">NBA PER Calculator</h1>
         </div>
     </header>
     <main>
 
         <div class="main-title"></div>
         <p class="opening">
-            Please fill the stats and click the "Find Fhe PER" button to calculate to PER
+            Please fill the stats and click the "Find The PER" button to calculate the PER<br/>
+            The stats should bethe total amount for one player in a season
         </p>
         <div class="main-container">
             <div class="PER-variable">
@@ -103,7 +104,11 @@
         <div class="result-container">
             <button class="calculate">Find The PER</button>
             <div class="PER-result-container">PER : <span class="PER-result"></span></div>
+            <div class="suprise"></div>
+            <div class="player-name"></div>
+
         </div>
+        
         <footer class="footer">Made by Yarden Ankonina & Alon Sapozhnikov <a class="github_link"
                 href="https://github.com/Yarden-Ankonina/NBA-Data-Science"><img
                     src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo-768x432.png" alt="#"></a></footer>
@@ -228,6 +233,9 @@
             padding: 0.5em;
             color: rgb(15, 73, 139);
         }
+        .suprise{
+            margin:0.5em;
+        }
 
         img {
             width: 3em;
@@ -276,8 +284,72 @@
         let res = Math.round(PER);
         res_PER = document.getElementsByClassName("PER-result")[0];
         res_PER.innerText = res;
+
+        suprise = document.getElementsByClassName("suprise")[0];
+        suprise.innerText = "You got a PER just like :";
+        
+        let playerNameVal;
+        
+        if(res >= 35){
+            playerNameVal = "Lebron James" ;
+        }
+        else if(res >= 30 && res < 35){
+            playerNameVal = "Lebron James" ;
+
+        }
+        else if(res >= 27.5 && res < 30){
+            playerNameVal = "Lebron James" ;
+
+        }
+        else if(res >= 25 && res < 27.5){
+            playerNameVal = "Lebron James" ;
+
+        }       
+        else if(res >= 22.5 && res < 25){
+            playerNameVal = "Lebron James" ;
+
+        }   
+        else if(res >= 20 && res < 22.5){
+            playerNameVal = "Lebron James" ;
+
+        }   
+        else if(res >= 18 && res < 20){
+            playerNameVal = "Lebron James" ;
+
+        }
+        else if(res >= 16.5 && res < 18){
+            playerNameVal = "Lebron James" ;
+
+        }
+        else if(res >= 15 && res < 16.5){
+            playerNameVal = "Lebron James" ;
+
+        }   
+        else if(res >= 13 && res < 15){
+            playerNameVal = "Deni Avdija" ;
+
+        } 
+        else if(res >= 11 && res < 13){
+            playerNameVal = "Deni Avdija" ;
+
+        } 
+        else if(res >= 9 && res < 11){
+            playerNameVal = "Alon Sapoz" ;
+
+        }
+        else{
+            playerNameVal = "Alon Sapoz" ;
+
+        }
+
+        playerName = document.getElementsByClassName("player-name")[0];
+        playerName.innerText = playerNameVal;
+
+
         setTimeout(function(){
             res_PER.innerText = "";
+            playerName = "";
+            suprise = "";
             alert("Thank You")
         }, 2000);
 
