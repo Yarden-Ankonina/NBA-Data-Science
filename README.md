@@ -1,5 +1,5 @@
 # NBA-Data-Science
-This repo contains a A  [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) project made by **Yarden Ankonina** and **Alon Sapozhnikov**, analyzing NBA players stats and specifically PER (player efficiency rating - by  John Hollinger's ).<br/>
+This repo contains a A  [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) project made by **Yarden Ankonina** and **Alon Sapozhnikov** in a data science class in Holon Institute of Technology, analyzing NBA players stats and specifically PER (player efficiency rating - by  John Hollinger's ).<br/>
 By using machine learning in python<br/>
 
 ### Main Purpose
