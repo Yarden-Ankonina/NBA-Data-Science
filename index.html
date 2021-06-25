@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PER Calculator</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <h1 class="title">PER Calculator</h1>
+        </div>
+    </header>
+    <main>
+
+        <div class="main-title"></div>
+        <p class="opening">
+            Please fill the stats and click the "Find Fhe PER" button to calculate to PER
+        </p>
+        <div class="main-container">
+            <div class="PER-variable">
+                <div class="inputName PTS">FG</div>
+                <label for="PTS"></label>
+                <input type="number" name="FG" id="FG" value="0" >
+            </div>
+
+            <div class="PER-variable">
+                <div class="inputName PTS">STL</div>
+                <label for="STL"></label>
+                <input type="number" name="STL" id="STL" value="0" > 
+            </div>
+
+            <div class="PER-variable">
+                <div class="inputName PTS">3P</div>
+                <label for="3P"></label>
+                <input type="number" name="3P" id="3P" value="0" >
+            </div>
+
+            <div class="PER-variable">
+                <div class="inputName PTS">BLK</div>
+                <label for="BLK"></label>
+                <input type="number" name="BLK" id="BLK" value="0" >
+            </div>
+
+            <div class="PER-variable">
+                <div class="inputName PTS">ORB</div>
+                <label for="ORB"></label>
+                <input type="number" name="ORB" id="ORB" value="0" >
+            </div>
+
+            <div class="PER-variable">
+                <div class="inputName PTS">AST</div>
+                <label for="AST"></label>
+                <input type="number" name="AST" id="AST" value="0" >
+            </div>
+
+            <div class="PER-variable">
+                <div class="inputName PTS">DRB</div>
+                <label for="DRB"></label>
+                <input type="number" name="DRB" id="DRB" value="0" >
+            </div>
+
+            <div class="PER-variable">
+                <div class="inputName PTS">PF</div>
+                <label for="PF"></label>
+                <input type="number" name="PF" id="PF" value="0" >
+            </div>
+
+            <div class="PER-variable">
+                <div class="inputName PTS">FTA</div>
+                <label for="FTA"></label>
+                <input type="number" name="FTA" id="FTA" value="0" >
+            </div>
+
+            <div class="PER-variable">
+                <div class="inputName PTS">FT</div>
+                <label for="FT"></label>
+                <input type="number" name="FT" id="FT" value="0" >
+            </div>
+
+            <div class="PER-variable">
+                <div class="inputName PTS">FGA</div>
+                <label for="FGA"></label>
+                <input type="number" name="FGA" id="FGA" value="0" >
+            </div>
+
+            <div class="PER-variable">
+                <div class="inputName PTS">TOV</div>
+                <label for="TOV"></label>
+                <input type="number" name="TOV" id="TOV" value="0" >
+            </div>
+
+            <div class="PER-variable">
+                <div class="inputName PTS">MP</div>
+                <label for="MP"></label>
+                <input type="number" name="MP" id="MP" value="1" >
+            </div>
+
+        </div>
+        <div class="result-container">
+            <button class="calculate">Find The PER</button>
+            <div class="PER-result-container">PER : <span class="PER-result"></span></div>
+        </div>
+        <footer class="footer">Made by Yarden Ankonina & Alon Sapozhnikov <a class="github_link"
+                href="https://github.com/Yarden-Ankonina/NBA-Data-Science"><img
+                    src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo-768x432.png" alt="#"></a></footer>
+    </main>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            min-height: 100%;
+            background-color: rgb(238, 246, 255);
+            ;
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+
+        }
+
+        .title {
+            margin: 0;
+            text-align: center;
+            padding: 0.3em;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            color: rgb(43, 128, 226);
+            box-shadow: 0.5px 0px 5px 4px rgba(0, 0, 0, 0.2);
+            background-color: rgb(193, 216, 241);
+            ;
+        }
+
+        main {
+            height: 100%;
+            padding: 0.2em;
+            text-align: center;
+            height: fit-content;
+
+        }
+
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0.2em;
+            padding: 0.2em;
+            justify-content: center;
+
+        }
+
+        .PER-variable {
+            text-align: center;
+            margin: 0.5em;
+            padding: 0.2em;
+            width: 25%;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input {
+            outline: none;
+            border: none;
+            border-bottom: 2px solid rgb(43, 128, 226);
+            border-radius: 3%;
+            padding: 0.5em;
+        }
+
+        .inputName {
+            margin-right: 0.5em;
+            margin-bottom: 0.2em;
+            border: none;
+        }
+
+        .result-container {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .calculate {
+            margin: 0.2em;
+            width: 10%;
+            border-radius: 5%;
+            padding: 1em;
+            border: none;
+            background-color: rgb(43, 128, 226);
+            color: rgba(255, 255, 255, 0.911);
+            font-weight: bold;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+
+        .calculate:hover {
+            background-color: rgb(48, 141, 247);
+            color: white;
+            cursor: pointer;
+        }
+
+        .PER-result-container {
+            background-color: rgb(240, 97, 109);
+            padding: 1em;
+            margin: 1em;
+            border-radius: 3%;
+            width: 20%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            text-align: start;
+
+        }
+        .PER-result{
+            padding-left: 1em;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: rgb(65, 143, 233);
+        }
+        footer {
+            text-align: center;
+            padding: 0.5em;
+            color: rgb(15, 73, 139);
+        }
+
+        img {
+            width: 3em;
+        }
+    </style>
+</body>
+<script type="text/javascript">
+    button = document.getElementsByClassName("calculate");
+    
+    button[0].addEventListener("click",()=> {
+        const inputFeilds = document.querySelectorAll("input");
+        const validInputs = Array.from(inputFeilds).filter( input => input.value !== "");
+        if (validInputs.length == 13)
+        {
+        let FG = document.getElementById("FG").value;
+        let STL = document.getElementById("STL").value;
+        let _3P = document.getElementById("3P").value;
+        let FT = document.getElementById("FT").value;
+        let BLK = document.getElementById("BLK").value;
+        let ORB = document.getElementById("ORB").value;
+        let AST = document.getElementById("AST").value;
+        let DRB = document.getElementById("DRB").value;
+        let FTA = document.getElementById("FTA").value;
+        let PF = document.getElementById("PF").value;
+        let FGA = document.getElementById("FGA").value;
+        let TOV = document.getElementById("TOV").value;
+        let MP = document.getElementById("MP").value;
+
+        console.log( FG );
+        console.log(STL );
+        console.log( _3P);
+        console.log( FT );
+        console.log( BLK);
+        console.log(ORB );
+        console.log(AST );
+        console.log(DRB );
+        console.log(FTA );
+        console.log(FGA );
+        console.log(TOV );
+        console.log( MP );
+        
+        let PER = ((FG*85.910 + STL*53.897 + _3P*51.757 + FT*46.845 + BLK*39.190 
+        + ORB*39.190 + AST*34.677 + DRB*14.707 - PF * 17.174 - FTA - FT*20.091
+        - FGA - FG*39.190 - TOV*53.897 ) * (1/MP))
+        
+        let res = Math.round(PER);
+        res_PER = document.getElementsByClassName("PER-result")[0];
+        res_PER.innerText = res;
+        setTimeout(function(){
+            res_PER.innerText = "";
+            alert("Thank You")
+        }, 2000);
+
+
+        }
+        else {
+            alert("Make sure to fill in all of the stats (MP != 0)");
+        }
+
+        
+
+    });
+</script>
+</html>
