@@ -21,6 +21,11 @@ We got our data from : <br/>
 
 
 ### Data Cleaning
+Remove missing data.<br/>
+Fill missing values.<br/>
+Handle outliers<br/>
+Format columns<br/>
+
 
 
 ### Visualisation
