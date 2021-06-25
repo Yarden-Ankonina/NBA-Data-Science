@@ -17,7 +17,7 @@ Can we predict the 2021-2022 MVP of the year based on PER?<br/>
 We got our data from : <br/>
 [basketball-reference](https://www.basketball-reference.com/leagues/NBA_2021_totals.html)<br/>
 [basketball-reference](https://www.basketball-reference.com/awards/mvp.html)<br/>
-[wik](https://en.wikipedia.org/wiki/Player_efficiency_rating)<br/>
+[wiki](https://en.wikipedia.org/wiki/Player_efficiency_rating)<br/>
 
 
 ### Data Cleaning
